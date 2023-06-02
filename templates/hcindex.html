@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+<title>Machine Learning Lab Experiment Deployment</title>
+<!DOCTYPE html>
+<style>
+h1 {text-align: center;}
+h2 {text-align: center;}
+h3 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
+</head>
+
+<body>
+ 
+     
+<div style="background-color:blue;" >
+<div>
+           
+<div>
+<center><p style="font-size:40px;color:white;margin-top:10px;">Poornima Institute of Engineering & Technology</p></center> 
+<center><p style="font-size:30px;color:white;margin-top:10px;">Department of Computer Engineering</p></center> 
+<center><p style="font-size:25px;color:white;margin-top:10px;">Machine Learning Lab Mid Term</p></center> 
+</div>
+</div>
+</div>
+
+<div>
+<h2>Principle Component Analysis</h2>
+<h4>Developed by </h4>
+<!-- Main Input For Receiving Query to our ML -->
+<form action="{{ url_for('predict')}}"method="get">
+
+ 
+    <div>
+  <input type="radio" id="male" name="gender" value=0>
+<label for="male">MALE</label><br>
+<input type="radio" id="female" name="gender" value=1>
+<label for="female">FEMALE</label><br>
+      </div>
+      <div>
+  <label for="exampleFormControlInput1" >Glucose</label>
+      <input type="number"  name="glucose" id="glucose" value=""min="1" max="200" placeholder="1" required="required">
+      </div>
+  <label for="exampleFormControlInput1" >BP</label>
+      <input type="number" name="bp" id="bp" value="" min="1" max="200" placeholder="" required="required">
+      </div>
+      <div>
+  <label for="exampleFormControlInput1" >Skin Thickness</label>
+      <input type="number"  name="skin" id="skin" value=""min="1" max="100" placeholder="1" required="required">
+      </div>
+       <div>
+      <label for="exampleFormControlInput1" >Insulin</label>
+      <input type="number" name="insulin" id="insulin" value="" min="1" max="140" placeholder="" required="required">
+      </div>
+      <div>
+  <label for="exampleFormControlInput1" >BMI</label>
+      <input type="number"  name="bmi" id="bmi" value=""min="1" max="100" placeholder="1" required="required">
+      </div>
+       <div>
+      <label for="exampleFormControlInput1" >Pedigree Functiom</label>
+      <input type="number" name="pf" id="pf" value="" min="1" max="140" placeholder="" required="required">
+      </div>
+      <div>
+  <label for="exampleFormControlInput1" >Age</label>
+      <input type="number"  name="age" id="age" value=""min="1" max="100" placeholder="1" required="required">
+      </div>
+       
+ 
+    <button type="submit" >predict Outcome</button>
+  </div>
+</form>
+
+<br>
+<br>
+{{ prediction_text }}
+
+</div>
+
+<div style="background-color:blue;" >
+<div>
+           
+<div>
+ <center><p style="font-size:25px;color:white;margin-top:20px;">Machine Learning MID TERM</p></center> 
+</div>
+</div>
+</div>
+</body>
+</html>
